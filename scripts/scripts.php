@@ -10,13 +10,13 @@ $('.modal').fadeOut(300);
 
 $(function () {
     $("#categories_select").change(function () {
-        $('div[id$="ok"]').css("display", "none");
-        $('#' + this.value.toLowerCase() + '_ok').css("display", "block");
-    }).change();
+        $('div[id$="ok"]').hide();
+        $('#' + this.value + '_ok').show();	
+	}).change();
 });
 
 $(document).ready(function(){
-$('#content').fadeIn(1700);
-$('#createNewUser').fadeIn(1700);
+$('#content').fadeIn(800);
+$('#createNewUser').fadeIn(800);
 });
 </script>

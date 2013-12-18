@@ -10,6 +10,10 @@ a {
     color: white;
 }
 
+h4 a {
+    color: black;
+}
+
 @media print {
   body * {
     visibility: hidden;
@@ -187,6 +191,7 @@ select {
 .headOptionLeft:hover {
     color: #888;
 }
+
 @media (max-width: 770px){
 #head1 {
     display: none;
@@ -307,14 +312,45 @@ color: white;
 .signinHead:hover {
     color: #888;
 }
-
+.radioOptions input[type="radio"] {
+    display: none;
+}
+.radioOptions {
+    border: 1px #888 solid;
+    width: 200px;
+    box-shadow: inset 0px 3px 5px #000;
+}
+.radioOptions label {
+    display: block;
+    background-color:#FFF;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+    color: #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.radioOptions label:hover {
+    background-color:#DDD;
+}
+.radioOptions input[type="radio"]:checked + label {
+    background-color:#0062FF;
+    color: white;
+    transition: width 1s linear 2s;
+    /* Safari */
+    -webkit-transition:width 1s linear 2s;
+}
 /*---------Sidebar---------*/
 #sidebar {
     top: 7.5%;
     height: 85%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-right: 2px solid #111;
     width: 150px;
-    padding: 15px;
     color: #000;
     position: fixed;
     font-size: .9em;
@@ -322,21 +358,43 @@ color: white;
     overflow: scroll;
     overflow-x: hidden;
 }
-#sideTitle {
+#sideLogo {
     width: 100px;
     text-decoration: underline;
-    margin-bottom: 40px;
+    margin-left: 17px;
+    margin-bottom: 20px;
 }
-.sideCat {
-    margin-top: -10px;
+.sideCatWrap {
     color: #000;
+    width: 100%;
+    background: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 1px;
+    padding-bottom: 7px;
+    margin-top: -10px;
+}
+.sideCatWrap:hover {
+    background: #00899E;
+    color: #fff;
+  -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.sideCat a {
+    color: #222;
+    width: 100%;
+}
+.sideCat a:hover {
+ color: #188EA8;
 }
 /*----------Content---------*/
 
 #content {
     margin-left: 220px;
     margin-right: 50px;
-    position: absolute;
+    position: absolute;    
     color: #000;
     display: none;
 }
@@ -345,6 +403,7 @@ color: white;
     margin-top: 70px;
     font-size: 3em; 
 }
+
 
 /*----------Create New User------------*/
 #createNewUser {
@@ -399,4 +458,123 @@ color: white;
 #supportLogo {
     margin-bottom: -200px;
     width: 100%;
+}
+/*-----------Categories List-----------*/
+#categoryTitle {
+    font-size: 3em;
+}
+#categoryContent {
+    margin-top: 100px;
+}
+.postName a{
+    margin-left: 10px;
+    font-size: .9em;
+    color: #333;
+    padding-top: 10px;
+}
+.postName a:hover {
+    color: #00899E;
+}
+#editInfo {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.postInfo {
+    color:#888;
+    display: block;
+    clear: both;
+    margin-top: -5px;
+}
+.postInfo a{
+    color: #00899E;
+    display: block;
+}
+/*-----------New Category-----------*/
+
+#newCatTitle{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+#newCatBox {
+    margin-bottom: -30px;
+}
+/*------------New Sub Category--------------*/
+#parentTitle {
+    margin-top: 50px;
+}
+#subcat_parent_dropdown {
+    width: 200px;
+    background: #fff;
+    color: #000;
+}
+/*-------------Admin-----------*/
+
+#admin {
+    margin-top: 100px;
+}
+.adminOption a{
+    margin-left: 20px;
+    color: #555;
+   -webkit-transition: all .7s ease;
+    -moz-transition: all .6s ease;
+    -ms-transition: all .6s ease;
+    -o-transition: all .6s ease;
+    font-size: .8em;
+}
+.adminOption a:hover{
+    color: #47D7FF;
+}
+/*------Home Page-------*/
+#homeContent{
+    margin-left: 200px;
+    margin-right: 50px;
+}
+
+/*--------Edit Post----------*/
+#editWrap {
+    width: 80%;
+    margin-left: 200px;
+    position: absolute;
+}
+#editContent {
+    color: #000;
+}
+#editContentText {
+    color: #000;
+}
+#editFormNames {
+    color: #000;
+}
+.editRadioOptions input[type="radio"] {
+    display: none;
+}
+.editRadioOptions {
+    border: 1px #888 solid;
+    width: 200px;
+    box-shadow: inset 0px 3px 5px #000;
+}
+.editRadioOptions label {
+    display: block;
+    background-color:#fff;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+    color: #000;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.editRadioOptions label:hover {
+    background-color:#DDD;
+}
+.editRadioOptions input[type="radio"]:checked + label {
+    background-color:#0062FF;
+    color: white;
+    transition: width 1s linear 2s;
+    /* Safari */
+    -webkit-transition:width 1s linear 2s;
 }

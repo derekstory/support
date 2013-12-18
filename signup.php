@@ -38,7 +38,7 @@ else
         }
         if(mysql_num_rows($q) != 0)
         {
-                        $errors[] = 'The username already already exist.  Please try again with a different username.';
+                        $errors[] = 'The username already already exist.  Please <a href="signup.php" style="color: #333; text-decoration: underline;">try again</a> with a different username.';
         }
          if(isset($_POST['user_pass']))
         {
